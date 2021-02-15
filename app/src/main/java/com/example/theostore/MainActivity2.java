@@ -12,6 +12,8 @@ import android.view.View;
 
 public class MainActivity2 extends AppCompatActivity {
 
+    // Hello World Test
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
