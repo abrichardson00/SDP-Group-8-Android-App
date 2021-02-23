@@ -8,6 +8,11 @@ public class Tray {
     private String capacity;
     private String timestamp;
 
+    public Tray(String name, String currentlyOut) {
+        this.name = name;
+        this.currentlyOut = currentlyOut;
+    }
+
     public String getName() {
         return name;
     }
