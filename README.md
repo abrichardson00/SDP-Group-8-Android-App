@@ -1,5 +1,26 @@
 # SDP-Group-8-Android-App
 
+## List of some voice control test inputs:
+
+**Store current tray:**
+
+"store tray", "put the current tray away", "can you store the tray please", "yo wassup dude, put the tray away", "I order you to store this box that is currently out", "I would like to have tray 1 stored",
+
+**Bring specific tray:**
+
+"bring me tray 1", "bring box ten", "bring tray number 2", "can you find me tray 6", "please retrieve tray 1", "tray 7",
+			
+**Bring random tray:**		
+
+"bring any tray", "get me a tray", "get me a box please", "can I have a box", "tray please", "I would like a tray",
+		
+**Find a desired item:**	
+
+"find my bananas", "can I have a pencil", "bring some chocolate", "give me my books", "help me find a purpose in life", "get pencils"
+
+
+## Phone app interracting with the web server:
+
 I'm just gonna give some information on the different api requests that the app should be able to make to the server - this seems like an appropriate place people can refer to.
 We can do the following http requests to *{ip address}:5000/...*
 
