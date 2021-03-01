@@ -10,5 +10,7 @@ public class BringingRandom extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bringing_random);
+        THEOStoreClient.bringTray("BL2");
+        System.out.println("RSTOIENRSTOIENRSTOIENRST");
     }
 }
