@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "311831612864",
+    "project_id": "your-theostore-2020",
+    "storage_bucket": "your-theostore-2020.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311831612864:android:551c4c819748e713e54c25",
+        "android_client_info": {
+          "package_name": "com.example.theostore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311831612864-8euirj8ng6memnltvmhbunkt4i6rhd1m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzTJ4jaheO7SA-bpX2evXfuNZ1_UHwaZk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311831612864-8euirj8ng6memnltvmhbunkt4i6rhd1m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

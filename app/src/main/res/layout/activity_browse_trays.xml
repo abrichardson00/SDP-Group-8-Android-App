@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BrowseTrays">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="440dp"
+            android:layout_height="96dp"
+            android:gravity="center"
+            android:text="Browse Trays\n"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/tray1"
+            android:text="@string/tray1_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/tray1"
+            android:backgroundTint="#989898"
+            android:onClick="tray1"
+            android:textAllCaps="false"
+            />
+        <Button
+            android:id="@+id/tray2"
+            android:text="@string/tray2_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/tray2"
+            android:backgroundTint="#989898"
+            android:onClick="tray2"
+            android:textAllCaps="false"
+            />
+        <Button
+            android:id="@+id/tray3"
+            android:text="@string/tray3_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/tray3"
+            android:backgroundTint="#989898"
+            android:onClick="tray3"
+            android:textAllCaps="false"
+            />
+
+<!--        <Button-->
+<!--            android:id="@+id/tray5"-->
+<!--            android:text="To be decided"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:drawableLeft="@drawable/theo"-->
+<!--            android:backgroundTint="#989898"-->
+<!--            android:onClick="tray4"-->
+<!--            android:textAllCaps="false"-->
+<!--            />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/tray6"-->
+<!--            android:text="To be decided"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:drawableLeft="@drawable/theo"-->
+<!--            android:backgroundTint="#989898"-->
+<!--            android:onClick="tray5"-->
+<!--            android:textAllCaps="false"-->
+<!--            />-->
+
+
+    </LinearLayout>
+</ScrollView>

@@ -5,47 +5,38 @@
     android:layout_width="395.28dp"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:onClick="tray11"
     android:scrollbarSize="27px"
-    tools:context=".MainActivity3">
+    tools:context=".Tray_choices">
 
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="372dp"
-        android:layout_height="498dp"
-        android:alpha="0.99"
-        android:background="@drawable/rounder_corner"
-        android:gravity="center_horizontal"
-        android:text="\nBrowse Trays "
-        android:textAlignment="center"
-        android:textColor="#020202"
-        android:textSize="20sp"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="352dp"
+        android:layout_height="499dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.575" />
+        app:srcCompat="@drawable/path8" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="122dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/roboto_thin"
+        android:id="@+id/bt_retrieve"
+        android:layout_width="120dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/roboto"
         android:text="Retrieve item"
         android:textColor="#1B1919"
         android:textSize="10sp"
         android:textStyle="bold"
-        app:backgroundTint="#FFFFFF"
+        app:backgroundTint="#4B48689F"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.127"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6"
-        app:layout_constraintVertical_bias="0.555" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -72,18 +63,19 @@
 
 
     <Button
-        android:id="@+id/Top3"
+        android:id="@+id/help"
         android:layout_width="52dp"
         android:layout_height="52dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:alpha="0.96"
         android:background="@drawable/round_button1"
+        android:onClick="help"
         android:text="help!"
         android:textColor="#FFFFFF"
         android:textSize="6sp"
         app:backgroundTint="#F8AD27"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.953"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -124,7 +116,7 @@
         app:srcCompat="@drawable/path1" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/bt_back"
         android:layout_width="57dp"
         android:layout_height="32dp"
         android:alpha="0.4"
@@ -137,51 +129,75 @@
         app:layout_constraintVertical_bias="0.022"
         app:srcCompat="?attr/actionModeCloseDrawable" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="371dp"
-        android:layout_height="150dp"
-        android:backgroundTint="#989898"
-        android:drawableLeft="@drawable/tray1"
-        android:onClick="tray1"
-        android:text="Tray no:1\n\nbournville chocolate, apple, banana, pencil, pen, ruler"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/tray_image"
+        android:layout_width="388dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="156dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.132" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="371dp"
-        android:layout_height="150dp"
-        android:backgroundTint="#D4D4D4"
-        android:drawableLeft="@drawable/tray2"
-        android:text="Tray no:2\n\nblue eye glasses case, utility knife, deck of cards, black eye glasses case"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/bt_bring"
+        android:layout_width="102dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/rectangle_corner"
+        android:onClick="bring"
+        android:text="Bring"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:backgroundTint="#F8AD27"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintHorizontal_bias="0.095"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.467" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button6"
-        android:layout_width="370dp"
-        android:layout_height="146dp"
-        android:backgroundTint="#989898"
-        android:drawableLeft="@drawable/tray2"
-        android:text="Tray no:3\n\nblue eye glasses case, utility knife, deck of cards, black eye glasses case"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/bt_info"
+        android:layout_width="102dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/rectangle_corner"
+        android:onClick="update_info"
+        android:text="Update Info"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:backgroundTint="#F8AD27"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintHorizontal_bias="0.883"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.796" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_store"
+        android:layout_width="102dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/rectangle_corner"
+        android:onClick="store"
+        android:text="Store"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:backgroundTint="#E56096"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tray_number"
+        android:layout_width="71dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="124dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tray_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

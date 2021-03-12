@@ -11,12 +11,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
+
         setContentView(R.layout.activity_main);
     }
 
     public void select(View view)
     {
-        Intent intent = new Intent(this, MainActivity3.class);
+        Intent intent = new Intent(this, BrowseTrays.class);
+        startActivity(intent);
+    }
+
+    public void help(View view)
+    {
+        Intent intent = new Intent(this, HelpSupport.class);
         startActivity(intent);
     }
 }

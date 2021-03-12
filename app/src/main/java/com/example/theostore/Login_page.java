@@ -26,7 +26,16 @@ public class Login_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
 
-        Name = (EditText) findViewById(R.id.etName);
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
+
+        setContentView(R.layout.activity_login_page);
+
+
+        Name = (EditText) findViewById(R.id.fullName);
         Password = (EditText) findViewById((R.id.etPassword));
         Info = (TextView) findViewById((R.id.tvInfo));
         Login = (Button) findViewById(R.id.btnLogin);

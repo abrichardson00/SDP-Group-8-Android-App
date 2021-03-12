@@ -33,12 +33,13 @@
 
 
     <Button
-        android:id="@+id/Top3"
+        android:id="@+id/help"
         android:layout_width="52dp"
         android:layout_height="52dp"
         android:layout_marginTop="28dp"
         android:alpha="0.96"
         android:background="@drawable/round_button1"
+        android:onClick="help"
         android:text="help!"
         android:textColor="#FFFFFF"
         android:textSize="6sp"
@@ -139,7 +140,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/Top3"
+        app:layout_constraintEnd_toEndOf="@+id/help"
         app:layout_constraintHorizontal_bias="0.79"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

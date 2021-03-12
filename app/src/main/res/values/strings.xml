@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">TheoStore</string>
+    <string name="tray1_des">Tray no:1\n\nbournville chocolate, apple, banana, pencil, pen, ruler</string>
+    <string name="tray2_des">Tray no:2\n\nblue eye glasses case, utility knife, deck of cards, black eye glasses case</string>
+    <string name="tray3_des">Books</string>
 </resources>

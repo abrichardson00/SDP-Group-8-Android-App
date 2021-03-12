@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.482" />
 
     <Button
-        android:id="@+id/UpdateTraybutton"
+        android:id="@+id/register"
         android:layout_width="267dp"
         android:layout_height="125dp"
         android:text="update_tray_info"
@@ -38,12 +38,13 @@
         app:layout_constraintVertical_bias="0.716" />
 
     <Button
-        android:id="@+id/Top3"
+        android:id="@+id/help"
         android:layout_width="52dp"
         android:layout_height="52dp"
         android:layout_marginTop="28dp"
         android:alpha="0.96"
         android:background="@drawable/round_button1"
+        android:onClick="help"
         android:text="help!"
         android:textColor="#FFFFFF"
         android:textSize="6sp"
@@ -102,7 +103,7 @@
         app:srcCompat="@drawable/path1" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/bt_back"
         android:layout_width="57dp"
         android:layout_height="32dp"
         android:alpha="0.4"

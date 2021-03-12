@@ -8,9 +8,10 @@
     tools:context=".LoggedOut">
 
     <Button
-        android:id="@+id/UpdateTraybutton"
+        android:id="@+id/register"
         android:layout_width="179dp"
         android:layout_height="78dp"
+        android:onClick="register"
         android:text="register"
         android:textAllCaps="false"
         android:textSize="18sp"
@@ -37,13 +38,14 @@
         app:layout_constraintVertical_bias="0.578" />
 
     <Button
-        android:id="@+id/Top3"
+        android:id="@+id/help"
         android:layout_width="52dp"
         android:layout_height="52dp"
         android:layout_marginTop="28dp"
         android:layout_marginBottom="169dp"
         android:alpha="0.96"
         android:background="@drawable/round_button1"
+        android:onClick="help"
         android:text="help!"
         android:textColor="#FFFFFF"
         android:textSize="6sp"
