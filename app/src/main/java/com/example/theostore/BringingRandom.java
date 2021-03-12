@@ -28,4 +28,7 @@ public class BringingRandom extends AppCompatActivity {
 
         // blah bah blah
     }
+
+    // Added some helpful comments
+
 }
