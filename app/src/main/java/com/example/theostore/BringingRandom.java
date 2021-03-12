@@ -27,4 +27,7 @@ public class BringingRandom extends AppCompatActivity {
         back_button.setOnClickListener(v -> startActivity(new Intent(this, Tray_choices.class)));
 
     }
+
+    // Added some helpful comments
+
 }
