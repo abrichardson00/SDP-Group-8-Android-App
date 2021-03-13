@@ -18,10 +18,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
+
+    private FirebaseAuth mFirebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -177,4 +181,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, HelpSupport.class);
         startActivity(intent);
     }
+
+    public void logout(View view)
+    {
+        mFirebaseAuth.signOut();
+        Intent intent = new Intent(this, Register.class);
+        startActivity(intent);
+    }
+
 }
