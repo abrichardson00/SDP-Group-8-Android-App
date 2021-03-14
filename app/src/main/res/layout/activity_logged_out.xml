@@ -9,13 +9,15 @@
 
     <Button
         android:id="@+id/register"
-        android:layout_width="179dp"
-        android:layout_height="78dp"
+        android:layout_width="305dp"
+        android:layout_height="74dp"
         android:onClick="register"
-        android:text="register"
+        android:text="Register"
         android:textAllCaps="false"
+        android:textColor="#3F51B5"
         android:textSize="18sp"
-        app:backgroundTint="#FF9800"
+        app:backgroundTint="#FFFFFF"
+        android:background="@drawable/border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,80 +26,57 @@
 
     <Button
         android:id="@+id/login_bt"
-        android:layout_width="179dp"
-        android:layout_height="78dp"
+        android:layout_width="301dp"
+        android:layout_height="71dp"
         android:onClick="login"
-        android:text="login"
+        android:text="Login"
         android:textAllCaps="false"
+        android:textColor="#3F51B5"
         android:textSize="18sp"
-        app:backgroundTint="#FF9800"
+        app:backgroundTint="#FFFFFF"
+        android:background="@drawable/border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578" />
+        app:layout_constraintVertical_bias="0.596" />
 
     <Button
         android:id="@+id/help"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
+        android:layout_width="61dp"
+        android:layout_height="54dp"
         android:layout_marginTop="28dp"
-        android:layout_marginBottom="169dp"
         android:alpha="0.96"
         android:background="@drawable/round_button1"
-        android:onClick="help"
-        android:text="help!"
-        android:textColor="#FFFFFF"
-        android:textSize="6sp"
-        app:backgroundTint="#F8AD27"
-        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        android:text="Help"
+        android:textAllCaps="false"
+        android:textColor="#3F51B5"
+        android:textSize="10sp"
+        app:backgroundTint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.501"
-        app:srcCompat="@drawable/path3" />
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/path2" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="395.28dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="104dp"
-        android:layout_marginRight="104dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.691"
-        app:srcCompat="@drawable/path4" />
-
-    <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="169dp"
-        android:layout_height="156dp"
+        android:layout_width="133dp"
+        android:layout_height="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.198"
+        app:layout_constraintVertical_bias="0.235"
         app:srcCompat="@drawable/theo" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="          The Home Economic \n Organisational Storage Solution"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.453" />
 </androidx.constraintlayout.widget.ConstraintLayout>
