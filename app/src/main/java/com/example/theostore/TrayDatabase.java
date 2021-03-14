@@ -28,8 +28,49 @@ public class TrayDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTableSQL = "CREATE TABLE " + TRAY_TABLE + " (" + COLUMN_ID + " INTEGER PRIMARY KEY, " + COLUMN_TRAY_CODE + " TEXT, " + COLUMN_USER_INFO + " TEXT, " + COLUMN_EXTRACTED_INFO + " TEXT, " + COLUMN_STATUS + " TEXT, " + COLUMN_CAPACITY + " REAL)";
+
+        String createTableSQL = String.format(
+                "CREATE TABLE %s (%s INTEGER PRIMARY KEY, %s TEXT, %s TEXT, %s TEXT, %s TEXT, %s REAL);",
+                TRAY_TABLE,
+                COLUMN_ID,
+                COLUMN_TRAY_CODE,
+                COLUMN_USER_INFO,
+                COLUMN_EXTRACTED_INFO,
+                COLUMN_STATUS,
+                COLUMN_CAPACITY);
+
+        String insertSQL = String.format(
+                "INSERT INTO %s (%s, %s, %s, %s, %s, %s) VALUES " +
+                        "(1, \"FL0\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(2, \"FR0\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(3, \"BL0\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(4, \"BR0\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(5, \"FL1\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(6, \"FR1\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(7, \"BL1\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(8, \"BR1\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(9, \"FL2\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(10, \"FR2\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(11, \"BL2\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(12, \"BR2\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(13, \"FL3\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(14, \"FR3\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(15, \"BL3\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(16, \"BR3\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(17, \"FL4\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(18, \"FR4\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(19, \"BL4\", \"No user description\", \"No extracted info\", \"STORED\", 0.0)," +
+                        "(20, \"BR4\", \"No user description\", \"No extracted info\", \"STORED\", 0.0);",
+                TRAY_TABLE,
+                COLUMN_ID,
+                COLUMN_TRAY_CODE,
+                COLUMN_USER_INFO,
+                COLUMN_EXTRACTED_INFO,
+                COLUMN_STATUS,
+                COLUMN_CAPACITY);
+
         db.execSQL(createTableSQL);
+        db.execSQL(insertSQL);
     }
 
     @Override
@@ -49,7 +90,7 @@ public class TrayDatabase extends SQLiteOpenHelper {
         cv.put(COLUMN_STATUS, tray.getStatus());
         cv.put(COLUMN_CAPACITY, tray.getCapacity());
 
-        long insert = db.insert(TRAY_TABLE, null, cv);
+        db.insert(TRAY_TABLE, null, cv);
         return true;
     }
 

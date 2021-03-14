@@ -51,8 +51,7 @@ public class RecyclerActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
-        trayDatabase.close();
+//        trayDatabase.close();
 
     }
 }
