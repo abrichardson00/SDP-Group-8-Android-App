@@ -27,7 +27,6 @@
         android:layout_height="54dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="17dp"
         android:layout_marginEnd="15dp"
         android:alpha="0.96"
         android:background="@drawable/round_button1"
@@ -36,10 +35,12 @@
         android:textColor="#3F51B5"
         android:textSize="10sp"
         app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintHorizontal_bias="0.978"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02" />
 
     <ImageButton
         android:id="@+id/bt_back"
@@ -60,11 +61,12 @@
         android:id="@+id/tray_confirm"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_marginTop="164dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.311" />
 
     <TextView
         android:id="@+id/tray_d"
@@ -86,7 +88,6 @@
         android:id="@+id/Top5"
         android:layout_width="122dp"
         android:layout_height="53dp"
-        android:layout_marginStart="52dp"
         android:alpha="0.96"
         android:background="@drawable/rectangle_corner"
         android:onClick="confirm"
@@ -95,15 +96,16 @@
         android:textSize="15dp"
         app:backgroundTint="#18445B"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.219"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.79" />
+        app:layout_constraintVertical_bias="0.787" />
 
     <Button
         android:id="@+id/top4"
         android:layout_width="122dp"
         android:layout_height="53dp"
-        android:layout_marginEnd="52dp"
         android:background="@drawable/rectangle_corner"
         android:backgroundTint="#FFFFFF"
         android:text="Cancel"
@@ -112,8 +114,10 @@
         app:backgroundTint="#18445B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.79" />
+        app:layout_constraintVertical_bias="0.787" />
 
     <TextView
         android:id="@+id/tray_no"

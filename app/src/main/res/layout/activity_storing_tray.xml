@@ -13,7 +13,6 @@
         android:layout_height="54dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="17dp"
         android:layout_marginEnd="15dp"
         android:alpha="0.96"
         android:background="@drawable/round_button1"
@@ -22,10 +21,12 @@
         android:textColor="#3F51B5"
         android:textSize="10sp"
         app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045" />
 
     <ImageButton
         android:id="@+id/bt_back"
