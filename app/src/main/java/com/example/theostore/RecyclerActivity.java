@@ -6,6 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.widget.SearchView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +28,7 @@ public class RecyclerActivity extends AppCompatActivity {
 
         trayDatabase = new TrayDatabase(RecyclerActivity.this);
 
-        List<Tray> allTrays = trayDatabase.getTrays();
+        List<Tray> allTrays = trayDatabase.getStoredTrays();
 
         trayRecyclerView = findViewById(R.id.recyclerView);
         trayRecyclerView.setHasFixedSize(true);
@@ -46,6 +49,24 @@ public class RecyclerActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        SearchView searchView = (SearchView) findViewById(R.id.search_bar);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                trayAdapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+        return true;
     }
 
     @Override

@@ -5,6 +5,8 @@ import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,11 +21,48 @@ import java.util.List;
 
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
 
-public class TrayListAdapter extends RecyclerView.Adapter<TrayListAdapter.TrayListViewHolder> {
+public class TrayListAdapter extends RecyclerView.Adapter<TrayListAdapter.TrayListViewHolder> implements Filterable {
 
     Context c;
     private List<Tray> trayList;
+    private List<Tray> completeTrayList;
     private OnItemClickListener cardListener;
+
+    @Override
+    public Filter getFilter() {
+        return trayFilter;
+    }
+
+    private Filter trayFilter = new Filter() {
+
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            List<Tray> filteredList = new ArrayList<>();
+
+            if (constraint == null || constraint.length() == 0) {
+                filteredList.addAll(completeTrayList);
+            } else {
+                String search = constraint.toString().toLowerCase().trim();
+
+                for (Tray tray : completeTrayList) {
+                    if ((tray.getUserInfo() + "tray").toLowerCase().contains(search) || search.contains(String.valueOf(tray.getId()))) {
+                        filteredList.add(tray);
+                    }
+                }
+            }
+            FilterResults searchResults = new FilterResults();
+            searchResults.values = filteredList;
+
+            return searchResults;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            trayList.clear();
+            trayList.addAll((List) results.values);
+            notifyDataSetChanged();
+        }
+    };
 
     public interface OnItemClickListener {
         void onItemClick(int position);
@@ -63,6 +102,7 @@ public class TrayListAdapter extends RecyclerView.Adapter<TrayListAdapter.TrayLi
     public TrayListAdapter(Context c, List<Tray> trays) {
         this.c = c;
         trayList = trays;
+        completeTrayList = new ArrayList<>(trayList);
     }
 
     @NonNull

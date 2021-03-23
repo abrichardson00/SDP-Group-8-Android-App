@@ -170,9 +170,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public void select(View view)
+    public void browseTrays(View view)
     {
-        Intent intent = new Intent(this, BrowseTrays.class);
+        Intent intent = new Intent(this, RecyclerActivity.class);
         startActivity(intent);
     }
 
