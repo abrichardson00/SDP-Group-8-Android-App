@@ -11,15 +11,14 @@
 
     <ImageView
         android:id="@+id/background"
-        android:layout_width="352dp"
-        android:layout_height="499dp"
+        android:layout_width="337dp"
+        android:layout_height="495dp"
+        android:layout_marginStart="68dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448"
         app:srcCompat="@drawable/path8" />
-
 
     <Button
         android:id="@+id/help"
@@ -88,7 +87,7 @@
         android:layout_height="53dp"
         android:layout_marginStart="52dp"
         android:alpha="0.96"
-        android:background="@drawable/rectangle_corner"
+        android:background="?attr/selectableItemBackground"
         android:onClick="confirm"
         android:text="Confirm"
         android:textColor="#FFFFFF"

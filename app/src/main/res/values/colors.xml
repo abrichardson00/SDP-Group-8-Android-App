@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="ikea_blue">#0E2E3E</color>
+    <color name="ikea_blue_light">#356E8A</color>
+    <color name="ikea_blue_disabled">#800E2E3E</color>
+    <color name="card_blue">#18445B</color>
+    <color name="ikea_yellow">#F8AD27</color>
+    <color name="ikea_yellow_light">#FFD790</color>
+    <color name="ikea_yellow_disabled">#80F8AD27</color>
 </resources>

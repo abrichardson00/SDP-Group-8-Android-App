@@ -10,16 +10,14 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Transformation;
+import com.bumptech.glide.Glide;
 
-import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
 
 public class Tray_choices extends AppCompatActivity {
 
     ImageView tray_image;
     TextView tray_no;
-    String tray_image_text;
+    TextView tray_description;
 
     Tray selectedTray;
 
@@ -41,16 +39,22 @@ public class Tray_choices extends AppCompatActivity {
 
         tray_image = (ImageView) findViewById(R.id.tray_image);
         tray_no = (TextView) findViewById(R.id.tray_number);
+        tray_description = (TextView) findViewById(R.id.tray_choices_description);
+
 
         selectedTray = (Tray) getIntent().getSerializableExtra("TRAY");
 
-        Transformation imgTransform = new RoundedCornersTransformation(40, 0);
-        Picasso.get()
-                .load(selectedTray.getURI())
-                .placeholder(R.drawable.empty_tray)
-                .error(R.drawable.empty_tray)
-                .transform(imgTransform)
-                .into(tray_image);
+        tray_description.setText(selectedTray.getUserInfo());
+
+//        Transformation imgTransform = new RoundedCornersTransformation(40, 0);
+//        Picasso.get()
+//                .load(selectedTray.getURI())
+//                .placeholder(R.drawable.empty_tray)
+//                .error(R.drawable.empty_tray)
+//                .transform(imgTransform)
+//                .into(tray_image);
+
+        Glide.with(this).load(selectedTray.getURI()).into(tray_image);
 
 //        Intent intent = getIntent();
 

@@ -10,10 +10,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Transformation;
-
-import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
+import com.bumptech.glide.Glide;
 
 public class Tray_confirmation extends AppCompatActivity {
 
@@ -40,13 +37,16 @@ public class Tray_confirmation extends AppCompatActivity {
 
         selectedTray = (Tray) getIntent().getSerializableExtra("TRAY");
 
-        Transformation imgTransform = new RoundedCornersTransformation(40, 0);
-        Picasso.get()
-                .load(selectedTray.getURI())
-                .placeholder(R.drawable.empty_tray)
-                .error(R.drawable.empty_tray)
-                .transform(imgTransform)
-                .into(tray_image);
+//        Transformation imgTransform = new RoundedCornersTransformation(40, 0);
+//        Picasso.get()
+//                .load(selectedTray.getURI())
+//                .placeholder(R.drawable.empty_tray)
+//                .error(R.drawable.empty_tray)
+//                .transform(imgTransform)
+//                .into(tray_image);
+
+        Glide.with(this).load(selectedTray.getURI()).into(tray_image);
+
 
         ImageButton back_button = (ImageButton) findViewById(R.id.bt_back);
 

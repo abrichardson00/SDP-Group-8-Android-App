@@ -2,38 +2,23 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="395.28dp"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:scrollbarSize="27px"
     tools:context=".Tray_choices">
 
+
     <ImageView
         android:id="@+id/background"
-        android:layout_width="352dp"
-        android:layout_height="499dp"
+        android:layout_width="346dp"
+        android:layout_height="564dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/path8" />
-
-    <Button
-        android:id="@+id/bt_retrieve"
-        android:layout_width="120dp"
-        android:layout_height="34dp"
-        android:layout_marginBottom="24dp"
-        android:fontFamily="@font/roboto"
-        android:text="Retrieve item"
-        android:textColor="#FFFFFF"
-        android:textSize="10dp"
-        app:backgroundTint="#18445B"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:srcCompat="@drawable/path8"
+        tools:visibility="gone" />
 
     <Button
         android:id="@+id/help"
@@ -71,66 +56,50 @@
 
     <ImageView
         android:id="@+id/tray_image"
-        android:layout_width="388dp"
-        android:layout_height="220dp"
-        android:layout_marginTop="156dp"
+        android:layout_width="310dp"
+        android:layout_height="310dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.435" />
 
     <Button
         android:id="@+id/bt_bring"
-        android:layout_width="102dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="400dp"
-        android:background="@drawable/rectangle_corner"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="616dp"
+        android:background="@drawable/search_bar"
         android:onClick="bring"
         android:text="Bring"
-        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:textColor="@color/ikea_blue"
         android:textSize="15dp"
-        app:backgroundTint="#18445B"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/bt_info"
-        android:layout_width="102dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="400dp"
-        android:background="@drawable/rectangle_corner"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="616dp"
+        android:background="@drawable/search_bar"
         android:onClick="update_info"
         android:text="Update Info"
-        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:textColor="@color/ikea_blue"
         android:textSize="15dp"
-        app:backgroundTint="#18445B"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.883"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/bt_store"
-        android:layout_width="102dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="400dp"
-        android:background="@drawable/rectangle_corner"
-        android:onClick="store"
-        android:text="Store"
-        android:textColor="#FFFFFF"
-        android:textSize="15dp"
-        app:backgroundTint="#18445B"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.923"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tray_number"
-        android:layout_width="71dp"
-        android:layout_height="22dp"
+        android:layout_width="267dp"
+        android:layout_height="27dp"
         android:layout_marginTop="124dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tray_image"
@@ -138,6 +107,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tray_choices_description"
+        android:layout_width="254dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="120dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

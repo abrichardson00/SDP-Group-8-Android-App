@@ -13,7 +13,7 @@ public class VoiceInputParser {
     static String[] simpleStopWords = {"me", "my", "the", "you", "want", "I", "like", "would", "a", "can", "please", "some"};
     static List<String> simpleStopWordsList = Arrays.asList(simpleStopWords);
 
-    static String[] trayWords = {"tray", "tree", "box"}; // "tree" = a work-around for bad speech processing. Probably fine - I reckon people wont store trees ...
+    static String[] trayWords = {"tray", "tree", "box", "trey"}; // "tree" = a work-around for bad speech processing. Probably fine - I reckon people wont store trees ...
     static List<String> trayWordsList = Arrays.asList(trayWords);
 
     static String[] bringCommands = {"bring", "ring", "retrieve", "find", "get", "have", "give"}; // a work around for bad speech to text where 'bring' is classified as 'ring'
@@ -37,7 +37,7 @@ public class VoiceInputParser {
     public static Command parseInputText(String inputText){
         System.out.println("Starting parsing ...");
         // convert to list of lowercase strings
-        ArrayList<String> words = new ArrayList<String>(Arrays.asList(inputText.toLowerCase().split(" ")));
+        ArrayList<String> words = new ArrayList<String>(Arrays.asList(inputText.toLowerCase().replace("for", "four").split(" ")));
 
         // lets remove basic words that mean nothing... "me", "the", "can", ... etc
         for (String word : new ArrayList<String>(words)) { // iterate through ArrayList copy, but remove from the original ArrayList

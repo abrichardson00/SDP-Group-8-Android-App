@@ -20,6 +20,7 @@ public class RecyclerActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager trayLayoutManager;
 
     TrayDatabase trayDatabase;
+    List<Tray> allTrays;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,32 +29,27 @@ public class RecyclerActivity extends AppCompatActivity {
 
         trayDatabase = new TrayDatabase(RecyclerActivity.this);
 
-        List<Tray> allTrays = trayDatabase.getStoredTrays();
+        allTrays = trayDatabase.getStoredTrays();
 
         trayRecyclerView = findViewById(R.id.recyclerView);
         trayRecyclerView.setHasFixedSize(true);
         trayLayoutManager = new LinearLayoutManager(this);
+        trayRecyclerView.setLayoutManager(trayLayoutManager);
 
         trayAdapter = new TrayListAdapter(this, allTrays);
-
-        trayRecyclerView.setLayoutManager(trayLayoutManager);
         trayRecyclerView.setAdapter(trayAdapter);
 
         trayAdapter.setOnItemClickListener(new TrayListAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
                 Tray clickedTray = allTrays.get(position);
-                Intent intent = new Intent(RecyclerActivity.this, Tray_confirmation.class);
+                Intent intent = new Intent(RecyclerActivity.this, Tray_choices.class);
                 intent.putExtra("TRAY", clickedTray);
                 startActivity(intent);
             }
         });
 
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        SearchView searchView = (SearchView) findViewById(R.id.search_bar);
+        SearchView searchView = findViewById(R.id.search_bar);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -66,13 +62,16 @@ public class RecyclerActivity extends AppCompatActivity {
                 return false;
             }
         });
-        return true;
+
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-//        trayDatabase.close();
-
+    protected void onResume() {
+        super.onResume();
+        allTrays = trayDatabase.getStoredTrays();
+        System.out.println(allTrays.get(3));
+        trayAdapter.notifyDataSetChanged();
     }
+
+
 }

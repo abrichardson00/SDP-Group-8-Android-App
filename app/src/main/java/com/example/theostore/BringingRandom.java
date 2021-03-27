@@ -52,6 +52,14 @@ public class BringingRandom extends AppCompatActivity {
         handlerThread.quit();
     }
 
+    @Override
+    public void onBackPressed() {
+
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+
+    }
+
     private void retrieveTray(Tray tray) {
         threadHandler.post(new TCPClient.RetrieveTrayRunnable(tray.getTrayCode()));
     }
